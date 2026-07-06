@@ -1,0 +1,30 @@
+import socket
+
+target = input("Enter your website: ")
+try:
+    target_ip = socket.gethostbyname(target)
+except socket.gaierror:
+    print("Invalid target.")
+    target = None
+
+
+def http_banner(target, port=80):
+    try:
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.settimeout(3)
+
+        sock.connect((target, port))
+        request = f"GET / HTTP/1.1\r\nHost: {target}\r\nConnection: close\r\n\r\n"
+        sock.send(request.encode())
+
+        banner = sock.recv(1024)
+        sock.close()
+
+        return banner.decode().strip()
+    except Exception as e:
+        return f"Error: {e}"
+
+
+if target:
+    result = http_banner(target)
+    print(result)
