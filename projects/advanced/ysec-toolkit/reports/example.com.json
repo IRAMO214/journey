@@ -1,0 +1,22 @@
+{
+  "target": "example.com",
+  "resolved_ip": "104.20.23.154",
+  "timestamp": "2026-07-07T11:29:09.097154Z",
+  "open_ports": [
+    {
+      "port": 21,
+      "open": true,
+      "banner": "Error: timed out"
+    },
+    {
+      "port": 80,
+      "open": true,
+      "banner": "HTTP/1.1 403 Forbidden\r\nDate: Tue, 07 Jul 2026 11:28:58 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 17\r\nConnection: close\r\nCache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0\r\nExpires: Thu, 01 Jan 1970 00:00:01 GMT\r\nReferrer-Policy: same-origin\r\nX-Frame-Options: SAMEORIGIN\r\nServer: cloudflare\r\nCF-RAY: a176823c69d2e278-MRS\r\n\r\nerror code: 1003"
+    },
+    {
+      "port": 443,
+      "open": true,
+      "banner": "HTTP/1.1 400 Bad Request\r\nServer: cloudflare\r\nDate: Tue, 07 Jul 2026 11:29:02 GMT\r\nContent-Type: text/html\r\nContent-Length: 253\r\nConnection: close\r\nCF-RAY: -\r\n\r\n<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>"
+    }
+  ]
+}
